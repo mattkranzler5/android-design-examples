@@ -100,7 +100,6 @@
         android:layout_rowSpan="2"
         android:layout_height="240dp"
         android:layout_gravity="fill"
-        android:gravity="left|top"
         />
 
     <TextView

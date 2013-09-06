@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PortfolioDrawer</string>
+
+    <!-- Section titles -->
+    <string name="nav_title">Stephanie Garvey Photography</string>
+    <string name="nav_more_collapsed">Read More About Stephanie</string>
+    <string name="nav_more_expanded">Read Less About Stephanie</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_projects">Projects</string>
+    <string name="nav_family">Family</string>
+    <string name="nav_weddings">Weddings</string>
+    <string name="nav_children">Children</string>
+    <string name="nav_babies">Maternity &amp; Babies</string>
+    <string name="nav_contact">Contact</string>
+
+    <!-- Category Titles -->
+    <string name="category_family_title">Family</string>
+    <string name="category_weddings_title">Weddings</string>
+    <string name="category_children_title">Children</string>
+    <string name="category_babies_title">Maternity &amp; Babies</string>
+
+    <!-- Category Descriptions -->
+    <string name="category_family_description">Exist in pictures for your children. You know how much changes in a year so photograph the changes, give yourself the power of laughter and timeless memory.</string>
+    <string name="category_wedding_description">Your wedding pictures are the only things that will last decades after that day to remind you to keep on celebrating your love and life together.</string>
+    <string name="category_children_description">For me, photographing a child\'s blossoming personality is as enriching and fun as it is to get to know them. These photographs remind you of the small humans you are raising and is a beautiful gift to your children as they grow into their future.</string>
+    <string name="category_babies_description">You can never be fully prepared for how our reality changes when you welcome new life. My photographs give reverence to the radiance, changes, joy and bond that encompasses mother and child from womb through the first year.</string>
+
+    <!-- Contact Form Labels -->
+    <string name="contact_first_name">First Name</string>
+    <string name="contact_last_name">Last Name</string>
+    <string name="contact_email">Email</string>
+    <string name="contact_subject">Subject</string>
+    <string name="contact_message">Message</string>
+    <string name="contact_submit">Submit</string>
+
+    <string name="about_text">My passion is to make photographs full of real emotion, so you can have real memories.\n\nI am happily married to my incredibly talented husband of 9 years and grateful to be a mother to two energetic boys. I love planning travels with my husband. I am a nature lover. I find joy in colors. Laughing is my favorite past time and I can\'t fully enjoy life without sharing it with others.\n\nI look forward to meeting and creating beautiful photographs for you to cherish!\n\nI am based in Orange County, California.</string>
+
+    <string name="button_text_read_more">Read More</string>
+
+</resources>
