@@ -1,0 +1,12 @@
+.DS_STORE
+build/
+gen/
+out/
+
+.idea/ant.xml
+.idea/uiDesigner.xml
+.idea/workspace.xml
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/vcs.xml
+/.gradle/

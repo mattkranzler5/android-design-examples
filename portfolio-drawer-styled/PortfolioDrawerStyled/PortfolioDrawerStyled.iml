@@ -16,7 +16,7 @@
     </facet>
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
-        <option name="GRADLE_PROJECT_PATH" value=":PortfolioSpinner" />
+        <option name="GRADLE_PROJECT_PATH" value=":PortfolioDrawerStyled" />
       </configuration>
     </facet>
   </component>

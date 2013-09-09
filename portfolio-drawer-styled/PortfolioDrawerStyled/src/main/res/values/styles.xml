@@ -1,0 +1,54 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="android:textColorPrimary">#444444</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="android:Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="NavigationListItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?android:listPreferredItemHeightSmall</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:paddingLeft">?android:listPreferredItemPaddingLeft</item>
+        <item name="android:background">@android:drawable/list_selector_background</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="NavigationListItemStyle.Child">
+        <item name="android:paddingLeft">?android:expandableListPreferredChildPaddingLeft</item>
+    </style>
+
+    <style name="FormTextStyle" parent="android:TextAppearance.Medium">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="OverlayTextStyle">
+        <item name="android:shadowColor">#000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">.5</item>
+    </style>
+
+</resources>
