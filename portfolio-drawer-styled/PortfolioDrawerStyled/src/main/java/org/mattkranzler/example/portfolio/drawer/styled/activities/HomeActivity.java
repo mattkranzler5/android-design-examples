@@ -4,6 +4,7 @@ package org.mattkranzler.example.portfolio.drawer.styled.activities;
 import android.animation.LayoutTransition;
 import android.app.ActionBar;
 import android.content.res.Configuration;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -93,11 +94,14 @@ public class HomeActivity extends FragmentActivity implements HomeFragment.HomeF
     private ViewGroup mAvatarCont;
     private TextView mAboutText;
     private TextView mMoreText;
-    private ImageView mMoreIcon;
 
     private boolean mAvatarExpanded;
     private LinearLayout.LayoutParams mCompressedParams;
     private LinearLayout.LayoutParams mExpandedParams;
+    private int mExpandProjectsIconResId;
+    private int mCollapseProjectsIconResId;
+    private int mExpandMoreIconResId;
+    private int mCollapseMoreIconResId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +109,14 @@ public class HomeActivity extends FragmentActivity implements HomeFragment.HomeF
         setContentView(R.layout.activity_home);
         mCompressedParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getResources().getDimensionPixelSize(R.dimen.home_avatar_height_collapsed));
         mExpandedParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+
+        TypedArray ta = obtainStyledAttributes(R.styleable.Theme);
+        mExpandProjectsIconResId = ta.getResourceId(R.styleable.Theme_iconOpenDark, 0);
+        mCollapseProjectsIconResId = ta.getResourceId(R.styleable.Theme_iconCloseDark, 0);
+        mExpandMoreIconResId = ta.getResourceId(R.styleable.Theme_iconOpenLight, 0);
+        mCollapseMoreIconResId = ta.getResourceId(R.styleable.Theme_iconCloseLight, 0);
+        ta.recycle();
+
         bindViews();
 
         final ActionBar actionBar = getActionBar();
@@ -134,9 +146,8 @@ public class HomeActivity extends FragmentActivity implements HomeFragment.HomeF
         mBabiesNav = (TextView) findViewById(R.id.nav_babies);
         mAboutText = (TextView) findViewById(R.id.nav_about);
         mMoreText = (TextView) findViewById(R.id.nav_more);
-        mMoreIcon = (ImageView) findViewById(R.id.nav_more_icon);
         mAvatarCont = (ViewGroup) findViewById(R.id.home_avatar_cont);
-        mAvatarCont.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.home_about_cont).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -152,8 +163,8 @@ public class HomeActivity extends FragmentActivity implements HomeFragment.HomeF
                 );
 
                 // update the more icon
-                mMoreIcon.setImageResource(
-                        mAvatarExpanded ? R.drawable.expander_open_holo_dark : R.drawable.expander_close_holo_dark
+                mMoreText.setCompoundDrawablesWithIntrinsicBounds(0, 0,
+                        mAvatarExpanded ? mExpandMoreIconResId : mCollapseMoreIconResId, 0
                 );
 
                 // update the more text
@@ -214,7 +225,7 @@ public class HomeActivity extends FragmentActivity implements HomeFragment.HomeF
                 mWeddingNav.setVisibility(newVisibility);
                 mChildrenNav.setVisibility(newVisibility);
                 mBabiesNav.setVisibility(newVisibility);
-                mProjects.setCompoundDrawablesWithIntrinsicBounds(0, 0, newVisibility == View.VISIBLE ? R.drawable.expander_close_holo_light : R.drawable.expander_open_holo_light, 0);
+                mProjects.setCompoundDrawablesWithIntrinsicBounds(0, 0, newVisibility == View.VISIBLE ? mCollapseProjectsIconResId : mExpandProjectsIconResId, 0);
                 break;
             case R.id.nav_home:
                 fragment = new HomeFragment();

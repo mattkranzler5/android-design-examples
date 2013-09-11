@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Theme">
+
+        <!-- Colors -->
+        <attr name="accentColor" format="color"/>
+
+        <!-- Backgrounds -->
+        <attr name="listSelector" format="reference"/>
+
+        <!-- Icons -->
+        <attr name="iconOpenLight" format="reference"/>
+        <attr name="iconCloseLight" format="reference"/>
+        <attr name="iconOpenDark" format="reference"/>
+        <attr name="iconCloseDark" format="reference"/>
+
+    </declare-styleable>
+
+</resources>

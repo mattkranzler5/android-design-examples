@@ -106,7 +106,7 @@
         android:id="@+id/contact_message"
         android:layout_columnSpan="2"
         android:layout_rowSpan="2"
-        android:layout_height="240dp"
+        android:layout_height="220dp"
         android:layout_gravity="fill"
         android:gravity="top|left"
         android:inputType="text"

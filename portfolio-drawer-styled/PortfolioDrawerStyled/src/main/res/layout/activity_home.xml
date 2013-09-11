@@ -25,13 +25,12 @@
             android:orientation="vertical"
             android:animateLayoutChanges="true"
             android:divider="?android:listDivider"
-            android:showDividers="middle">
+            android:showDividers="middle|end">
 
             <RelativeLayout
                 android:id="@+id/home_avatar_cont"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/home_avatar_height_collapsed"
-                android:clickable="true"
                 android:background="#333333">
 
                 <ImageView
@@ -49,9 +48,12 @@
                 <LinearLayout
                     android:id="@+id/home_about_cont"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_marginTop="126dp">
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="126dp"
+                    android:background="?listSelector"
+                    android:clickable="true"
+                    android:orientation="vertical">
 
                     <TextView
                         style="@style/OverlayTextStyle"
@@ -61,8 +63,8 @@
                         android:textAppearance="?android:textAppearanceMediumInverse"
                         android:fontFamily="sans-serif-condensed"
                         android:text="@string/nav_title"
-                        android:paddingLeft="4dp"
-                        android:paddingTop="4dp"
+                        android:layout_marginTop="4dp"
+                        android:paddingLeft="?android:listPreferredItemPaddingLeft"
                         android:paddingRight="4dp" />
 
                     <TextView
@@ -74,40 +76,24 @@
                         android:fontFamily="sans-serif-light"
                         android:text="@string/about_text"
                         android:layout_marginTop="4dp"
-                        android:paddingLeft="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:paddingLeft="?android:listPreferredItemPaddingLeft"
                         android:paddingRight="4dp"
                         android:visibility="gone" />
 
-                    <RelativeLayout
+                    <TextView
+                        style="@style/OverlayTextStyle"
+                        android:id="@+id/nav_more"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_gravity="bottom">
-
-                        <TextView
-                            style="@style/OverlayTextStyle"
-                            android:id="@+id/nav_more"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentBottom="true"
-                            android:textAppearance="?android:textAppearanceSmallInverse"
-                            android:fontFamily="sans-serif-light"
-                            android:textSize="12sp"
-                            android:textAllCaps="true"
-                            android:text="@string/nav_more_collapsed"
-                            android:paddingLeft="5dp"
-                            android:paddingBottom="8dp" />
-
-                        <ImageView
-                            android:id="@+id/nav_more_icon"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/expander_open_holo_dark"
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true" />
-
-                    </RelativeLayout>
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:textAppearanceSmallInverse"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="12sp"
+                        android:textAllCaps="true"
+                        android:text="@string/nav_more_collapsed"
+                        android:gravity="center_vertical"
+                        android:drawableRight="?iconOpenLight"
+                        android:paddingLeft="?android:listPreferredItemPaddingLeft" />
 
                 </LinearLayout>
 
@@ -122,7 +108,7 @@
             <TextView
                 style="@style/NavigationListItemStyle"
                 android:id="@+id/nav_projects"
-                android:drawableRight="@drawable/expander_open_holo_light"
+                android:drawableRight="?iconOpenDark"
                 android:text="@string/nav_projects"
                 android:onClick="onNavigationItemClicked" />
 

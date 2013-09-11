@@ -16,13 +16,27 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
 
+        <!-- App Attrs -->
+        <item name="accentColor">@color/yellow</item>
+        <item name="listSelector">@drawable/list_selector_holo_light</item>
+        <item name="iconOpenLight">@drawable/expander_open_holo_dark</item>
+        <item name="iconCloseLight">@drawable/expander_close_holo_dark</item>
+        <item name="iconOpenDark">@drawable/expander_open_holo_light</item>
+        <item name="iconCloseDark">@drawable/expander_close_holo_light</item>
+
+        <!-- System Attrs -->
         <item name="android:windowBackground">@android:color/white</item>
         <item name="android:actionBarStyle">@style/ActionBarStyle</item>
         <item name="android:textColorPrimary">#444444</item>
+        <item name="android:listViewStyle">@style/ListViewAppTheme</item>
+        <item name="android:gridViewStyle">@style/GridViewAppTheme</item>
+        <item name="android:editTextStyle">@style/EditTextAppTheme</item>
+        <item name="android:actionBarItemBackground">?listSelector</item>
+        <item name="android:selectableItemBackground">?listSelector</item>
     </style>
 
     <style name="ActionBarStyle" parent="android:Widget.Holo.Light.ActionBar.Solid">
-        <item name="android:background">@android:color/white</item>
+        <item name="android:background">@drawable/ab_transparent_app_theme</item>
     </style>
 
     <style name="NavigationListItemStyle">
@@ -30,9 +44,10 @@
         <item name="android:layout_height">?android:listPreferredItemHeightSmall</item>
         <item name="android:gravity">left|center_vertical</item>
         <item name="android:paddingLeft">?android:listPreferredItemPaddingLeft</item>
-        <item name="android:background">@android:drawable/list_selector_background</item>
+        <item name="android:background">?android:selectableItemBackground</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
         <item name="android:clickable">true</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
 
     <style name="NavigationListItemStyle.Child">
@@ -51,4 +66,15 @@
         <item name="android:shadowRadius">.5</item>
     </style>
 
+    <style name="ListViewAppTheme" parent="android:Widget.ListView">
+        <item name="android:listSelector">?listSelector</item>
+    </style>
+
+    <style name="GridViewAppTheme" parent="android:Widget.GridView">
+        <item name="android:listSelector">?listSelector</item>
+    </style>
+
+    <style name="EditTextAppTheme" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/edit_text_holo_light</item>
+    </style>
 </resources>

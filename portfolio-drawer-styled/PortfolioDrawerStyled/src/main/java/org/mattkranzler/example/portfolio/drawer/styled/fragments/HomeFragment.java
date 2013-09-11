@@ -204,17 +204,18 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-            ImageView imageView = new ImageView(container.getContext());
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            View root = LayoutInflater.from(container.getContext()).inflate(R.layout.home_pager_item, null);
+            ImageView imageView = (ImageView) root.findViewById(R.id.image);
+            View imageBtn = root.findViewById(R.id.image_btn);
 
             Picasso.with(container.getContext())
                     .load(mImages[position])
                     .into(imageView);
 
-            container.addView(imageView);
-            imageView.setOnClickListener(HomeFragment.this);
+            container.addView(root);
+            imageBtn.setOnClickListener(HomeFragment.this);
 
-            return imageView;
+            return root;
         }
 
         @Override
