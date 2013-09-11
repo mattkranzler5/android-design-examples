@@ -12,7 +12,7 @@
     <ScrollView
         android:id="@+id/left_drawer_scroll"
         android:layout_gravity="start"
-        android:layout_width="280dp"
+        android:layout_width="@dimen/drawer_width"
         android:layout_height="match_parent"
         android:background="#ffffff"
         >

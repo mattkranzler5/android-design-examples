@@ -109,7 +109,8 @@
         android:layout_height="220dp"
         android:layout_gravity="fill"
         android:gravity="top|left"
-        android:inputType="text"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
         android:layout_marginLeft="@dimen/form_field_padding"
         android:layout_marginRight="@dimen/form_field_padding" />
 

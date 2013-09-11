@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceLargeInverse"
+            android:textSize="@dimen/category_title_text_size"
             android:fontFamily="sans-serif-condensed"
             />
 
@@ -39,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceSmallInverse"
+            android:textSize="@dimen/category_description_text_size"
             android:fontFamily="sans-serif-light"
             />
 
