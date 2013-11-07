@@ -92,15 +92,15 @@
         android:layout_gravity="fill"
         android:singleLine="true"
         android:inputType="textEmailSubject"
-        android:layout_marginLeft="?formLabelPadding"
-        android:layout_marginRight="?formLabelPadding" />
+        android:layout_marginLeft="?formFieldPadding"
+        android:layout_marginRight="?formFieldPadding" />
 
     <TextView
         style="@style/FormLabelTextStyle"
         android:text="@string/contact_subject"
         android:layout_gravity="left|top"
-        android:layout_marginLeft="?formFieldPadding"
-        android:layout_marginRight="?formFieldPadding" />
+        android:layout_marginLeft="?formLabelPadding"
+        android:layout_marginRight="?formLabelPadding" />
 
     <EditText
         android:id="@+id/contact_message"
@@ -111,8 +111,8 @@
         android:gravity="top|left"
         android:inputType="textMultiLine"
         android:singleLine="false"
-        android:layout_marginLeft="?formLabelPadding"
-        android:layout_marginRight="?formLabelPadding" />
+        android:layout_marginLeft="?formFieldPadding"
+        android:layout_marginRight="?formFieldPadding" />
 
     <TextView
         style="@style/FormLabelTextStyle"
