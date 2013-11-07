@@ -42,11 +42,11 @@
     </style>
 
     <style name="ListViewStyle" parent="android:Widget.ListView">
-        <item name="android:listSelector">?listSelector</item>
+        <item name="android:listSelector">?android:selectableItemBackground</item>
     </style>
 
     <style name="GridViewStyle" parent="android:Widget.GridView">
-        <item name="android:listSelector">?listSelector</item>
+        <item name="android:listSelector">?android:selectableItemBackground</item>
     </style>
 
     <style name="EditTextStyle" parent="android:Widget.EditText">
