@@ -14,7 +14,7 @@
         android:layout_gravity="start"
         android:layout_width="@dimen/drawer_width"
         android:layout_height="match_parent"
-        android:background="?drawerBackgroundColor"
+        android:background="?android:windowBackground"
         >
 
         <!-- The navigation drawer -->
