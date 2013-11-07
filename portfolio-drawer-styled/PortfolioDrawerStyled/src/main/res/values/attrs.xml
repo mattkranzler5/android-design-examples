@@ -8,9 +8,6 @@
         <attr name="drawerBackgroundColor" format="color"/>
         <attr name="avatarBackgroundColor" format="color"/>
 
-        <!-- Backgrounds -->
-        <attr name="listSelector" format="reference"/>
-
         <!-- Icons -->
         <attr name="expandIconLight" format="reference"/>
         <attr name="collapseIconLight" format="reference"/>

@@ -23,9 +23,6 @@
         <item name="drawerBackgroundColor">@android:color/white</item>
         <item name="avatarBackgroundColor">@color/dark_gray</item>
 
-        <!-- Backgrounds -->
-        <item name="listSelector">@drawable/list_selector_holo_light</item>
-
         <!-- Icons -->
         <item name="expandIconLight">@drawable/expander_open_holo_dark</item>
         <item name="collapseIconLight">@drawable/expander_close_holo_dark</item>
@@ -49,8 +46,8 @@
         <item name="android:listViewStyle">@style/ListViewStyle</item>
         <item name="android:gridViewStyle">@style/GridViewStyle</item>
         <item name="android:editTextStyle">@style/EditTextStyle</item>
-        <item name="android:actionBarItemBackground">?listSelector</item>
-        <item name="android:selectableItemBackground">?listSelector</item>
+        <item name="android:selectableItemBackground">@drawable/list_selector_holo_light</item>
+        <!-- End System Attrs -->
     </style>
 
 </resources>

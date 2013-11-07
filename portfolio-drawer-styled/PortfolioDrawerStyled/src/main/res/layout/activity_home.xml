@@ -53,7 +53,7 @@
                     android:layout_marginTop="126dp"
                     android:paddingLeft="?drawerLeftMargin"
                     android:paddingRight="?drawerRightMargin"
-                    android:background="?listSelector"
+                    android:background="?android:selectableItemBackground"
                     android:clickable="true"
                     android:orientation="vertical">
 
