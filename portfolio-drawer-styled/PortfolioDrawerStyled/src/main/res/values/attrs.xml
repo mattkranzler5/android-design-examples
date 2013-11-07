@@ -5,7 +5,6 @@
 
         <!-- Colors -->
         <attr name="accentColor" format="color"/>
-        <attr name="drawerBackgroundColor" format="color"/>
         <attr name="avatarBackgroundColor" format="color"/>
 
         <!-- Icons -->

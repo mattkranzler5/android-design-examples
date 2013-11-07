@@ -20,7 +20,6 @@
         <!-- App Attrs -->
         <!-- Colors -->
         <item name="accentColor">@color/yellow</item>
-        <item name="drawerBackgroundColor">@android:color/white</item>
         <item name="avatarBackgroundColor">@color/dark_gray</item>
 
         <!-- Icons -->
