@@ -5,15 +5,25 @@
 
         <!-- Colors -->
         <attr name="accentColor" format="color"/>
+        <attr name="drawerBackgroundColor" format="color"/>
+        <attr name="avatarBackgroundColor" format="color"/>
 
         <!-- Backgrounds -->
         <attr name="listSelector" format="reference"/>
 
         <!-- Icons -->
-        <attr name="iconOpenLight" format="reference"/>
-        <attr name="iconCloseLight" format="reference"/>
-        <attr name="iconOpenDark" format="reference"/>
-        <attr name="iconCloseDark" format="reference"/>
+        <attr name="expandIconLight" format="reference"/>
+        <attr name="collapseIconLight" format="reference"/>
+        <attr name="expandIconDark" format="reference"/>
+        <attr name="collapseIconDark" format="reference"/>
+
+        <!-- Margins & Padding -->
+        <attr name="drawerLeftMargin" format="dimension"/>
+        <attr name="drawerRightMargin" format="dimension"/>
+        <attr name="navigationChildItemLeftMargin" format="dimension"/>
+        <attr name="contentPadding" format="dimension"/>
+        <attr name="formFieldPadding" format="dimension"/>
+        <attr name="formLabelPadding" format="dimension"/>
 
     </declare-styleable>
 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+        <!-- App Attrs -->
+        <!-- Colors -->
+        <item name="accentColor">@color/yellow</item>
+        <item name="drawerBackgroundColor">@android:color/white</item>
+        <item name="avatarBackgroundColor">@color/dark_gray</item>
+
+        <!-- Backgrounds -->
+        <item name="listSelector">@drawable/list_selector_holo_light</item>
+
+        <!-- Icons -->
+        <item name="expandIconLight">@drawable/expander_open_holo_dark</item>
+        <item name="collapseIconLight">@drawable/expander_close_holo_dark</item>
+        <item name="expandIconDark">@drawable/expander_open_holo_light</item>
+        <item name="collapseIconDark">@drawable/expander_close_holo_light</item>
+
+        <!-- Margins & Padding -->
+        <item name="contentPadding">@dimen/content_padding</item>
+        <item name="drawerLeftMargin">?android:listPreferredItemPaddingLeft</item>
+        <item name="drawerRightMargin">?android:listPreferredItemPaddingRight</item>
+        <item name="navigationChildItemLeftMargin">?android:expandableListPreferredChildPaddingLeft</item>
+        <item name="formFieldPadding">@dimen/form_field_padding</item>
+        <item name="formLabelPadding">@dimen/form_label_padding</item>
+        <!-- End App Attrs -->
+
+        <!-- System Attrs -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="android:textColorPrimary">@color/dark_gray</item>
+        <item name="android:textColorPrimaryInverse">@android:color/white</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <item name="android:gridViewStyle">@style/GridViewStyle</item>
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+        <item name="android:actionBarItemBackground">?listSelector</item>
+        <item name="android:selectableItemBackground">?listSelector</item>
+    </style>
+
+</resources>

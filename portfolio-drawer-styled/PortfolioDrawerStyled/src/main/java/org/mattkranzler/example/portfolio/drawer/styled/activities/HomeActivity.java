@@ -16,7 +16,6 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -96,7 +95,7 @@ public class HomeActivity extends FragmentActivity implements HomeFragment.HomeF
     private TextView mMoreText;
 
     private boolean mAvatarExpanded;
-    private LinearLayout.LayoutParams mCompressedParams;
+    private LinearLayout.LayoutParams mCollapsedParams;
     private LinearLayout.LayoutParams mExpandedParams;
     private int mExpandProjectsIconResId;
     private int mCollapseProjectsIconResId;
@@ -107,24 +106,27 @@ public class HomeActivity extends FragmentActivity implements HomeFragment.HomeF
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        mCompressedParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getResources().getDimensionPixelSize(R.dimen.home_avatar_height_collapsed));
+        mCollapsedParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getResources().getDimensionPixelSize(R.dimen.home_avatar_height_collapsed));
         mExpandedParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 
+        // obtain some styled attributes for our theme
         TypedArray ta = obtainStyledAttributes(R.styleable.Theme);
-        mExpandProjectsIconResId = ta.getResourceId(R.styleable.Theme_iconOpenDark, 0);
-        mCollapseProjectsIconResId = ta.getResourceId(R.styleable.Theme_iconCloseDark, 0);
-        mExpandMoreIconResId = ta.getResourceId(R.styleable.Theme_iconOpenLight, 0);
-        mCollapseMoreIconResId = ta.getResourceId(R.styleable.Theme_iconCloseLight, 0);
+        mExpandProjectsIconResId = ta.getResourceId(R.styleable.Theme_expandIconDark, 0);
+        mCollapseProjectsIconResId = ta.getResourceId(R.styleable.Theme_collapseIconDark, 0);
+        mExpandMoreIconResId = ta.getResourceId(R.styleable.Theme_expandIconLight, 0);
+        mCollapseMoreIconResId = ta.getResourceId(R.styleable.Theme_collapseIconLight, 0);
         ta.recycle();
 
         bindViews();
 
         final ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setDisplayUseLogoEnabled(true);
-        actionBar.setLogo(R.drawable.ic_logo_black);
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeButtonEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(false);
+            actionBar.setDisplayUseLogoEnabled(true);
+            actionBar.setLogo(R.drawable.ic_logo_black);
+        }
     }
 
     private void bindViews() {
@@ -153,7 +155,7 @@ public class HomeActivity extends FragmentActivity implements HomeFragment.HomeF
 
                 // expand the avatar container to show the about text
                 mAvatarCont.setLayoutParams(
-                        mAvatarExpanded ? mCompressedParams : mExpandedParams
+                        mAvatarExpanded ? mCollapsedParams : mExpandedParams
                 );
                 mAvatarCont.requestLayout();
 

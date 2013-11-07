@@ -1,41 +1,6 @@
 <resources>
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
-
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-
-        <!-- App Attrs -->
-        <item name="accentColor">@color/yellow</item>
-        <item name="listSelector">@drawable/list_selector_holo_light</item>
-        <item name="iconOpenLight">@drawable/expander_open_holo_dark</item>
-        <item name="iconCloseLight">@drawable/expander_close_holo_dark</item>
-        <item name="iconOpenDark">@drawable/expander_open_holo_light</item>
-        <item name="iconCloseDark">@drawable/expander_close_holo_light</item>
-
-        <!-- System Attrs -->
-        <item name="android:windowBackground">@android:color/white</item>
-        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
-        <item name="android:textColorPrimary">#444444</item>
-        <item name="android:listViewStyle">@style/ListViewAppTheme</item>
-        <item name="android:gridViewStyle">@style/GridViewAppTheme</item>
-        <item name="android:editTextStyle">@style/EditTextAppTheme</item>
-        <item name="android:actionBarItemBackground">?listSelector</item>
-        <item name="android:selectableItemBackground">?listSelector</item>
-    </style>
-
-    <style name="ActionBarStyle" parent="android:Widget.Holo.Light.ActionBar.Solid">
+    <style name="ActionBarStyle" parent="android:Widget.Holo.Light.ActionBar">
         <item name="android:background">@drawable/ab_transparent_app_theme</item>
     </style>
 
@@ -43,7 +8,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?android:listPreferredItemHeightSmall</item>
         <item name="android:gravity">left|center_vertical</item>
-        <item name="android:paddingLeft">?android:listPreferredItemPaddingLeft</item>
+        <item name="android:paddingLeft">?drawerLeftMargin</item>
+        <item name="android:paddingRight">?drawerRightMargin</item>
         <item name="android:background">?android:selectableItemBackground</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
         <item name="android:clickable">true</item>
@@ -51,10 +17,10 @@
     </style>
 
     <style name="NavigationListItemStyle.Child">
-        <item name="android:paddingLeft">?android:expandableListPreferredChildPaddingLeft</item>
+        <item name="android:paddingLeft">?navigationChildItemLeftMargin</item>
     </style>
 
-    <style name="FormTextStyle" parent="android:TextAppearance.Medium">
+    <style name="FormLabelTextStyle" parent="android:TextAppearance.Medium">
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
@@ -64,17 +30,27 @@
         <item name="android:shadowDx">1</item>
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">.5</item>
+        <item name="android:textColor">?android:textColorPrimaryInverse</item>
     </style>
 
-    <style name="ListViewAppTheme" parent="android:Widget.ListView">
+    <style name="OverlayTextStyle.Title">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="OverlayTextStyle.Description">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="ListViewStyle" parent="android:Widget.ListView">
         <item name="android:listSelector">?listSelector</item>
     </style>
 
-    <style name="GridViewAppTheme" parent="android:Widget.GridView">
+    <style name="GridViewStyle" parent="android:Widget.GridView">
         <item name="android:listSelector">?listSelector</item>
     </style>
 
-    <style name="EditTextAppTheme" parent="android:Widget.EditText">
+    <style name="EditTextStyle" parent="android:Widget.EditText">
         <item name="android:background">@drawable/edit_text_holo_light</item>
     </style>
+
 </resources>

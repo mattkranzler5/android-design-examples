@@ -14,7 +14,7 @@
         android:layout_gravity="start"
         android:layout_width="@dimen/drawer_width"
         android:layout_height="match_parent"
-        android:background="#ffffff"
+        android:background="?drawerBackgroundColor"
         >
 
         <!-- The navigation drawer -->
@@ -31,7 +31,7 @@
                 android:id="@+id/home_avatar_cont"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/home_avatar_height_collapsed"
-                android:background="#333333">
+                android:background="?avatarBackgroundColor">
 
                 <ImageView
                     android:id="@+id/home_avatar"
@@ -51,49 +51,42 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginTop="126dp"
+                    android:paddingLeft="?drawerLeftMargin"
+                    android:paddingRight="?drawerRightMargin"
                     android:background="?listSelector"
                     android:clickable="true"
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/OverlayTextStyle"
+                        style="@style/OverlayTextStyle.Title"
                         android:id="@+id/nav_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:textAppearanceMediumInverse"
-                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="18sp"
                         android:text="@string/nav_title"
-                        android:layout_marginTop="4dp"
-                        android:paddingLeft="?android:listPreferredItemPaddingLeft"
-                        android:paddingRight="4dp" />
+                        android:layout_marginTop="4dp" />
 
                     <TextView
                         style="@style/OverlayTextStyle"
                         android:id="@+id/nav_about"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:textAppearanceSmallInverse"
-                        android:fontFamily="sans-serif-light"
+                        android:textSize="14sp"
                         android:text="@string/about_text"
                         android:layout_marginTop="4dp"
                         android:layout_marginBottom="4dp"
-                        android:paddingLeft="?android:listPreferredItemPaddingLeft"
-                        android:paddingRight="4dp"
                         android:visibility="gone" />
 
                     <TextView
-                        style="@style/OverlayTextStyle"
+                        style="@style/OverlayTextStyle.Description"
                         android:id="@+id/nav_more"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:textAppearanceSmallInverse"
-                        android:fontFamily="sans-serif-light"
                         android:textSize="12sp"
                         android:textAllCaps="true"
                         android:text="@string/nav_more_collapsed"
                         android:gravity="center_vertical"
-                        android:drawableRight="?iconOpenLight"
-                        android:paddingLeft="?android:listPreferredItemPaddingLeft" />
+                        android:drawableRight="?expandIconLight" />
 
                 </LinearLayout>
 
@@ -108,7 +101,7 @@
             <TextView
                 style="@style/NavigationListItemStyle"
                 android:id="@+id/nav_projects"
-                android:drawableRight="?iconOpenDark"
+                android:drawableRight="?expandIconDark"
                 android:text="@string/nav_projects"
                 android:onClick="onNavigationItemClicked" />
 

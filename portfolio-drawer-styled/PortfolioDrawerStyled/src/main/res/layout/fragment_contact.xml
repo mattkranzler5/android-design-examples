@@ -13,8 +13,8 @@
         android:layout_columnSpan="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/form_field_padding"
-        android:paddingRight="@dimen/form_field_padding">
+        android:paddingLeft="?formFieldPadding"
+        android:paddingRight="?formFieldPadding">
 
         <EditText
             android:id="@+id/contact_first_name"
@@ -45,11 +45,11 @@
         android:layout_columnSpan="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/form_label_padding"
-        android:paddingRight="@dimen/form_label_padding">
+        android:paddingLeft="?formLabelPadding"
+        android:paddingRight="?formLabelPadding">
 
         <TextView
-            style="@style/FormTextStyle"
+            style="@style/FormLabelTextStyle"
             android:text="@string/contact_first_name"
             android:layout_gravity="left|top"
             android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
             android:layout_width="16dp" />
 
         <TextView
-            style="@style/FormTextStyle"
+            style="@style/FormLabelTextStyle"
             android:text="@string/contact_last_name"
             android:layout_gravity="left|top"
             android:layout_width="wrap_content"
@@ -76,15 +76,15 @@
         android:layout_gravity="fill"
         android:singleLine="true"
         android:inputType="textEmailAddress"
-        android:layout_marginLeft="@dimen/form_field_padding"
-        android:layout_marginRight="@dimen/form_field_padding" />
+        android:layout_marginLeft="?formFieldPadding"
+        android:layout_marginRight="?formFieldPadding" />
 
     <TextView
-        style="@style/FormTextStyle"
+        style="@style/FormLabelTextStyle"
         android:text="@string/contact_email"
         android:layout_gravity="left|top"
-        android:layout_marginLeft="@dimen/form_label_padding"
-        android:layout_marginRight="@dimen/form_label_padding" />
+        android:layout_marginLeft="?formLabelPadding"
+        android:layout_marginRight="?formLabelPadding" />
 
     <EditText
         android:id="@+id/contact_subject"
@@ -92,15 +92,15 @@
         android:layout_gravity="fill"
         android:singleLine="true"
         android:inputType="textEmailSubject"
-        android:layout_marginLeft="@dimen/form_field_padding"
-        android:layout_marginRight="@dimen/form_field_padding" />
+        android:layout_marginLeft="?formLabelPadding"
+        android:layout_marginRight="?formLabelPadding" />
 
     <TextView
-        style="@style/FormTextStyle"
+        style="@style/FormLabelTextStyle"
         android:text="@string/contact_subject"
         android:layout_gravity="left|top"
-        android:layout_marginLeft="@dimen/form_label_padding"
-        android:layout_marginRight="@dimen/form_label_padding" />
+        android:layout_marginLeft="?formFieldPadding"
+        android:layout_marginRight="?formFieldPadding" />
 
     <EditText
         android:id="@+id/contact_message"
@@ -111,16 +111,16 @@
         android:gravity="top|left"
         android:inputType="textMultiLine"
         android:singleLine="false"
-        android:layout_marginLeft="@dimen/form_field_padding"
-        android:layout_marginRight="@dimen/form_field_padding" />
+        android:layout_marginLeft="?formLabelPadding"
+        android:layout_marginRight="?formLabelPadding" />
 
     <TextView
-        style="@style/FormTextStyle"
+        style="@style/FormLabelTextStyle"
         android:text="@string/contact_message"
         android:layout_columnSpan="2"
         android:layout_gravity="left|top"
-        android:layout_marginLeft="@dimen/form_label_padding"
-        android:layout_marginRight="@dimen/form_label_padding" />
+        android:layout_marginLeft="?formLabelPadding"
+        android:layout_marginRight="?formLabelPadding" />
 
     <LinearLayout
         style="?android:attr/buttonBarStyle"
@@ -138,7 +138,7 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textAppearance="@style/FormTextStyle"
+            android:textAppearance="@style/FormLabelTextStyle"
             android:textColor="?android:textColorPrimary" />
 
     </LinearLayout>
